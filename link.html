@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Momento Gallery</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/link.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="home.html" class="sidebar-title">
+            <i class="fas fa-arrow-left"></i> Memento Gallery
+        </a>
+        <ul>
+            <li><a href="redesSociais.html">🌐 Redes Sociais</a></li>
+            <li><a href="link.html">🔗 Link</a></li>
+            <li><a href="qrCode.html">🔍 QRCode</a></li>
+        </ul>
+    </div>
+
+    <!-- Gallery Container com Link Partilhável -->
+    <div class="gallery-container">
+        <h1>Partilhe o seu Link!</h1>
+        <p>Aqui está o link que pode ser partilhado:</p>
+
+        <!-- Link que pode ser partilhado -->
+        <div class="link-container">
+            <input type="text" id="shareLink" value="https://www.exemplo.com/gallery" readonly>
+            <button onclick="copyLink()">Copiar Link</button>
+        </div>
+    </div>
+
+    <script>
+        function copyLink() {
+            const linkInput = document.getElementById('shareLink');
+            linkInput.select();
+            linkInput.setSelectionRange(0, 99999); // Para dispositivos móveis
+            document.execCommand("copy");
+            alert("Link copiado: " + linkInput.value);
+        }
+    </script>
+</body>
+
+</html>

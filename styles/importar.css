@@ -1,0 +1,259 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    width: 200px;
+    height: 96vh;
+    background-color: #33333366;
+    color: #fff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    margin: 2vh;
+    border-radius: 25px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilo para o título "Momento Gallery" como um botão */
+.sidebar-title {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;  /* Tamanho um pouco maior para o título */
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.sidebar-title i {
+    margin-right: 10px;  /* Espaçamento entre o ícone e o texto */
+    font-size: 20px;  /* Tamanho do ícone */
+}
+
+.sidebar-title:hover {
+    background-color: #555;
+}
+
+
+/* Área da Galeria */
+.gallery {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    position: relative;
+    text-align: center;
+}
+
+/* Título da galeria */
+.gallery h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Barra de Seleção */
+.import {
+    padding: 8px 12px;
+    background: #74ebd5;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da galeria de fotos */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo de cada foto na galeria */
+.photo {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    /* Mantém a proporção quadrada */
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ajuste da imagem dentro de cada foto */
+.photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Mantém a proporção da imagem e a ajusta ao espaço */
+    border-radius: 8px;
+}
+
+/* Efeito de hover */
+.photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contêiner para botões no canto inferior direito */
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilo comum para os botões Importar e Selecionar todas */
+.import-button,
+.selectAllButton {
+    padding: 8px 12px;
+    background: #74ebd5;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+/* Efeito de hover */
+.import-button:hover,
+.selectAllButton:hover {
+    background: #66d0c7;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .gallery {
+        padding: 20px;
+    }
+
+    .selection {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .sidebar ul li {
+        font-size: 14px;
+    }
+
+    .selection {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+}
+
+/* Estilo para fotos selecionadas */
+.photo.selected {
+    border: 3px solid #74ebd5; /* Destaque com uma borda */
+    position: relative;
+}
+
+/* Ícone de seleção */
+.photo.selected::after {
+    content: '✓'; /* Marca de seleção */
+    color: white;
+    background: #74ebd5;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

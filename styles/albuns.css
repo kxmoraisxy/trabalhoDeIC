@@ -1,0 +1,281 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+    font-size: 16px;
+}
+.sidebar {
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    width: 200px;
+    height: 96vh;
+    background-color: #33333366;
+    color: #fff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    margin: 2vh;
+    border-radius: 25px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilo para o título "Momento Gallery" como um botão */
+.sidebar-title {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;  /* Tamanho um pouco maior para o título */
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.sidebar-title i {
+    margin-right: 10px;  /* Espaçamento entre o ícone e o texto */
+    font-size: 20px;  /* Tamanho do ícone */
+}
+
+.sidebar-title:hover {
+    background-color: #555;
+}
+/* Container principal */
+.gallery-container {
+    background: #fff;
+    width: 80%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Título */
+.gallery-container h1 {
+    font-size: 32px;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* Formulário para criar álbum */
+.album-create-container {
+    margin-bottom: 30px;
+}
+
+.album-create-container input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.album-create-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.album-create-container button:hover {
+    background-color: #45a049;
+}
+
+/* Formulário de upload */
+.upload-container {
+    margin-bottom: 30px;
+}
+
+.upload-container input {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.upload-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.upload-container button:hover {
+    background-color: #45a049;
+}
+
+/* Container dos álbuns */
+.albums {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Estilo para cada álbum */
+.album {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.album:hover {
+    transform: scale(1.05);
+}
+
+.album h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.album .cover-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.album .cover-image:hover {
+    opacity: 0.8;
+}
+
+/* Estilo para a página do álbum */
+.album-page {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+}
+
+.album-page h1 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adiciona um botão de voltar na página do álbum */
+.back-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+.album-create-container,
+.upload-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.album-create-container input,
+.upload-container input {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+#saveAlbumBtn {
+    padding: 10px 16px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+}
+
+#saveAlbumBtn:hover {
+    background-color: #45a049;
+}

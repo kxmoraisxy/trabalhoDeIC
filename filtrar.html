@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partilhar - Momento Gallery</title>
+    <!-- Link para Font Awesome para os ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/filtrar.css">
+    <script src="./scripts/home.js" defer></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="home.html" class="sidebar-title">
+            <i class="fas fa-arrow-left"></i> Memento Gallery
+        </a>
+        <ul>
+            <li><a href="locais.html">Locais</a></li>
+            <li><a href="pessoas.html"> Pessoas </a></li>
+            <li><a href="documentos.html">Documentos</a></li>
+        </ul>
+    </div>
+    
+    <div class="gallery-container">
+        <h1>Bem-vindo à Memento Gallery!</h1>
+        <p>Explore as fotos incríveis que temos aqui!</p>
+
+        <!-- Aviso do modo de seleção -->
+        <div id="selectionModeAlert" class="alert hidden">
+            Modo de seleção ativado. Clique em uma foto para partilhar.
+            <button class="close-btn" onclick="hideAlert()">×</button>
+        </div>
+
+        <!-- Seção de fotos -->
+        <div class="photo-gallery"></div>
+    </div>
+</body>
+
+</html>

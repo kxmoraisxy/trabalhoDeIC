@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Novo Álbum</title>
+    <link rel="stylesheet" href="./styles/album-novo.css">
+    <script src="album-novo.js" defer></script>
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Criar Novo Álbum</h1>
+
+        <!-- Formulário para nome do álbum -->
+        <div class="album-create-container">
+            <label for="albumName">Nome do Álbum:</label>
+            <input type="text" id="albumName" placeholder="Digite o nome do álbum">
+        </div>
+
+        <!-- Formulário para adicionar fotos -->
+        <div class="upload-container">
+            <label for="fileInput">Adicionar Fotos:</label>
+            <input type="file" id="fileInput" accept="image/*" multiple>
+        </div>
+
+        <!-- Botão para salvar álbum -->
+        <button id="saveAlbumBtn">Salvar Álbum</button>
+    </div>
+
+    <script>
+        // Função para salvar álbum
+        document.getElementById('saveAlbumBtn').addEventListener('click', () => {
+            const albumName = document.getElementById('albumName').value.trim();
+            const files = document.getElementById('fileInput').files;
+
+            if (!albumName) {
+                alert('Por favor, insira o nome do álbum.');
+                return;
+            }
+
+            if (files.length === 0) {
+                alert('Por favor, adicione pelo menos uma foto.');
+                return;
+            }
+
+            // Simula o salvamento (você pode usar localStorage, backend, etc.)
+            alert(`Álbum "${albumName}" criado com ${files.length} fotos.`);
+
+            // Redireciona de volta para a galeria principal
+            window.location.href = 'albuns.html';
+        });
+    </script>
+</body>
+</html>

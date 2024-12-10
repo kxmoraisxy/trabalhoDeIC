@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partilhar QRCode - Momento Gallery</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/qrcode.css">
+    <script src="./scripts/qrCode.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="home.html" class="sidebar-title">
+            <i class="fas fa-arrow-left"></i> Memento Gallery
+        </a>
+        <ul>
+            <li><a href="redesSociais.html">🌐 Redes Sociais</a></li>
+            <li><a href="link.html">🔗 Link</a></li>
+            <li><a href="QRCode.html">🔍 QRCode</a></li>
+        </ul>
+    </div>
+    
+    <div class="gallery-container">
+        <h1>Partilhe o QRCode da Momento Gallery!</h1>
+        <p>Selecione o botão abaixo para partilhar o QRCode:</p>
+
+        <!-- Exibindo a imagem do QRCode -->
+        <div class="qrcode-image">
+            <img src="imagens/qrCode.jpg" alt="QR Code" />
+        </div>
+
+        <!-- Botão de partilhar QRCode -->
+        <button class="share-button" onclick="shareQRCode()">Partilhar QRCode</button>
+    </div>
+</body>
+
+</html>
+
+

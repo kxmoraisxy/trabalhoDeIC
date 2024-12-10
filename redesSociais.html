@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partilhar - Memento Gallery</title>
+    <!-- Link para Font Awesome para os ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/redesSociais.css">
+    <script defer src="./scripts/partilhar.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="home.html" class="sidebar-title">
+            <i class="fas fa-arrow-left"></i> Memento Gallery
+        </a>
+        <ul>
+            <li><a href="redesSociais.html">🌐 Redes Sociais</a></li>
+            <li><a href="link.html">🔗 Link</a></li>
+            <li><a href="qrCode.html">🔍 QRCode</a></li>
+        </ul>
+    </div>
+
+    <div class="gallery-container">
+        <h1>Partilhe a Memento Gallery!</h1>
+        <p>Selecione a rede social para partilhar:</p>
+
+        <!-- Galeria de ícones de redes sociais -->
+        <div class="social-gallery">
+            <div class="social-item">
+                <a href="#" onclick="openPopup('Facebook')">
+                    <i class="fab fa-facebook fa-4x"></i>
+                </a>
+            </div>
+            <div class="social-item">
+                <a href="#" onclick="openPopup('Instagram')">
+                    <i class="fab fa-instagram fa-4x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-header">
+            <h2 id="popup-title">Título</h2>
+            <button class="close-popup" onclick="closePopup()">×</button>
+        </div>
+        <div class="popup-content">
+            <!-- Barra com nome e logo da rede social -->
+            <div id="popup-bar" class="popup-bar">
+                <img id="popup-logo" src="" alt="Logo da Rede Social" class="popup-logo">
+                <span id="popup-network-name"></span>
+            </div>
+            <!-- Caixa de texto -->
+            <textarea id="popup-textarea" placeholder="Escreva algo para o post..." rows="4"></textarea>
+            <!-- A imagem será carregada dinamicamente aqui -->
+            <img id="popup-image" src="" alt="Foto a ser partilhada" style="max-width: 100%; border-radius: 10px;">
+            <!-- Botão de partilha -->
+            <button id="share-button" onclick="shareContent()">Partilhar</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Popup de sucesso -->
+    <div id="success-popup" class="success-popup" style="display: none;">
+        Partilha feita com sucesso!
+    </div>
+</body>
+
+</html>

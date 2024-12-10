@@ -1,0 +1,180 @@
+/* Reset de estilos básicos */
+* {
+
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+}
+
+/* Container principal */
+.gallery-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #ddd;
+}
+
+/* Título */
+.gallery-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Estilo das perguntas */
+.question {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px; /* Distância entre as perguntas e os botões */
+    line-height: 1.5;
+}
+
+/* Botões de alternância */
+.toggle-button {
+    padding: 12px 30px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s ease;
+    margin-bottom: 20px; /* Distância entre os botões e a próxima pergunta */
+    width: 50%; /* Centraliza os botões */
+    max-width: 300px;
+}
+
+/* Botão ativado */
+.toggle-button.active {
+    background-color: #4caf50;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Efeito de hover */
+.toggle-button:hover {
+    background-color: #ff0000;
+}
+
+/* Botão de confirmação */
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #74ebd5, #4a90e2);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+/* Estilo do link dentro do botão */
+.submit-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.submit-button a:hover {
+    text-decoration: underline;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilos para a barra lateral */
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 96vh;
+    background-color: #33333366;
+    color: #fff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    margin: 2vh;
+    border-radius: 25px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilos para o conteúdo principal */
+.main-content {
+    margin-left: 220px; /* Para ajustar o espaço da barra lateral */
+    padding: 20px;
+}
+
+/* Estilo para o título "Momento Gallery" como um botão */
+.sidebar-title {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;  /* Tamanho um pouco maior para o título */
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.sidebar-title i {
+    margin-right: 10px;  /* Espaçamento entre o ícone e o texto */
+    font-size: 20px;  /* Tamanho do ícone */
+}
+
+.sidebar-title:hover {
+    background-color: #555;
+}

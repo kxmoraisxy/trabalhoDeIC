@@ -1,0 +1,178 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: 200px;
+    height: calc(100vh - 20px);
+    background-color: #33333366;
+    color: #fff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+
+.sidebar h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.sidebar-title {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    /* Tamanho um pouco maior para o título */
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.sidebar-title i {
+    margin-right: 10px;
+    /* Espaçamento entre o ícone e o texto */
+    font-size: 20px;
+    /* Tamanho do ícone */
+}
+
+.sidebar-title:hover {
+    background-color: #555;
+}
+
+/* Galeria */
+.gallery {
+    margin-left: 230px;
+    /* Evita sobreposição com a sidebar */
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo da galeria de fotos */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 álbuns por linha */
+    gap: 20px;
+}
+
+/* Estilo para o contêiner de cada foto com o título */
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+/* Estilo para a capa retangular */
+.photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Ajuste da imagem dentro do retângulo */
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    /* Mantém 5 colunas */
+    .photo-grid {
+        grid-template-columns: repeat(5, 1fr);
+        /* Garante 5 colunas em qualquer tela */
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .gallery {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Mantém 5 colunas */
+    .photo-grid {
+        grid-template-columns: repeat(5, 1fr);
+        /* Garante 5 colunas em telas menores */
+        gap: 10px;
+    }
+
+    .sidebar ul li {
+        font-size: 14px;
+    }
+}

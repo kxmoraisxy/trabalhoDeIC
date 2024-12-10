@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Detalhes da Foto - Momento Gallery</title>
+    <link rel="stylesheet" href="./styles/foto.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="home.html" class="sidebar-title">
+            <i class="fas fa-arrow-left"></i> Memento Gallery
+        </a>
+        <ul>
+            <li><a href="redesSociais.html">🌐 Redes Sociais</a></li>
+            <li><a href="link.html">🔗 Link</a></li>
+            <li><a href="QRCode.html">🔍 QRCode</a></li>
+        </ul>
+    </div>
+
+    <div class="photo-details-container">
+        <h1>Informações Interativas da Foto</h1>
+
+        <!-- Foto com efeito hover -->
+        <div class="photo-container">
+            <img id="photo" alt="Foto selecionada">
+            <div class="photo-hover-info">
+                <p><strong>Pessoas:</strong> Joana, Carlos</p>
+                <p><strong>Tipo:</strong> Retrato</p>
+                <p><strong>Emoções:</strong> Alegria, Serenidade</p>
+            </div>
+        </div>
+
+        <!-- Detalhes mais completos -->
+        <div class="photo-details">
+            <table>
+                <tr>
+                    <th>Campo</th>
+                    <th>Detalhes</th>
+                </tr>
+                <tr>
+                    <td>📅 Data e Hora</td>
+                    <td>12 de Novembro de 2024, 14:35</td>
+                </tr>
+                <tr>
+                    <td>📍 Localização</td>
+                    <td>
+                        <div class="location-container">
+                            <img src="../imagens/location.jpeg" alt="Location" />
+                        </div>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>📷 Modelo da Câmera</td>
+                    <td>Canon EOS 5D Mark IV</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Botão para voltar -->
+        <button class="back-button" onclick="goBack()">🔙 Voltar</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "home.html";
+        }
+
+        // Função para alterar a imagem de acordo com o parâmetro da URL
+        function changeImage() {
+            // Pega o parâmetro "imagem" da URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageName = urlParams.get('imagem'); // Obtém o valor do parâmetro "imagem"
+
+            if (imageName) {
+                // Altera o src da imagem com base no parâmetro
+                document.getElementById('photo').src = `./imagens/${imageName}`;
+            }
+        }
+
+        // Chama a função para alterar a imagem quando a página carregar
+        window.onload = changeImage;
+    </script>
+</body>
+
+</html>

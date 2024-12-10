@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum</title>
+    <link rel="stylesheet" href="./styles/albuns.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <h1 id="albumTitle">Álbum</h1>
+        <div class="photo-gallery" id="photoGallery"></div>
+    </div>
+
+    <script>
+        // Função para carregar as fotos do álbum
+        function loadAlbumPhotos() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const albumName = urlParams.get('album'); // Obtém o nome do álbum da URL
+
+            document.getElementById('albumTitle').innerText = albumName;
+
+            // Aqui, defina suas fotos para o álbum. Substitua isso com a lógica real ou caminhos
+            const albumPhotos = {
+                'Viagem à Praia': ['imagens/pessoa1.jpg', 'imagens/pessoa2.jpg', 'imagens/pessoa3.jpg'],
+                'Aniversário': ['imagens/pessoa4.jpg', 'imagens/pessoa5.jpg', 'imagens/pessoa6.jpg'],
+                'Natal 2024': ['imagens/pessoa7.jpg', 'imagens/pessoa8.jpg', 'images/pessoa9.jpg']
+            };
+
+            const photos = albumPhotos[albumName] || [];
+            const gallery = document.getElementById('photoGallery');
+
+            photos.forEach(photo => {
+                const img = document.createElement('img');
+                img.src = photo;
+                img.alt = 'Foto do álbum';
+                gallery.appendChild(img);
+            });
+        }
+
+        // Carrega as fotos quando a página for carregada
+        window.onload = loadAlbumPhotos;
+    </script>
+</body>
+</html>

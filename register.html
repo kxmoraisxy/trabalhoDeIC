@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Momento Gallery</title>
+    <link rel="stylesheet" href="./styles/register.css">
+    <script src="scripts/register.js"></script>
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Momento Gallery</h1>
+        <form id="registerForm" action="/login" method="POST">
+            <input type="text" id="registerName" name="name" placeholder="Name" required>
+            <input type="email" id="registerEmail" name="email" placeholder="Email" required>
+            <input type="password" id="registerPassword" name="password" placeholder="Senha" required>
+            <button type="submit">Register</button>
+            <a href="login.html">Já tenho conta!</a>
+        </form>
+    </div>
+</body>
+
+</html>

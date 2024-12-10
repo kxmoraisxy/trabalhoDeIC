@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="./styles/importar.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+        <!-- Barra Lateral -->
+        <div class="sidebar">
+            <a href="home.html" class="sidebar-title">
+                <i class="fas fa-arrow-left"></i> Memento Gallery
+            </a>
+            <ul>
+                <li><a href="importar.html">📂 Computador</a></li>
+                <li><a href="onedrive.html">☁️ OneDrive</a></li>
+                <li><a href="drive.html">🗃️ Drive</a></li>
+            </ul>
+        </div>
+<div class="container">
+        <!-- Área de Conteúdo Principal -->
+        <main class="gallery">
+            <!-- Barra de Seleção -->
+            <div class="button-container">
+                <button class="import-button">Importar</button>
+                <button class="select-button" id="selectButton">Selecionar</button>
+            </div>
+            
+            <!-- Imagens da Galeria -->
+            <div class="photo-grid">
+                <!-- Adicione mais divs com a classe 'photo' para aumentar a galeria -->
+                <div class="photo" photo_id="1">
+                    <img src="./imagens/pessoa2.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="2">
+                    <img src="./imagens/pessoa3.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="3">
+                    <img src="./imagens/pessoa4.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="4">
+                    <img src="./imagens/pessoa2.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="5">
+                    <img src="./imagens/pessoa4.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="6">
+                    <img src="./imagens/pessoa5.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="7">
+                    <img src="./imagens/pessoa1.jpg"alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="8">
+                    <img src="./imagens/pessoa3.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="9">
+                    <img src="./imagens/pessoa4.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="10">
+                    <img src="./imagens/pessoa5.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="11">
+                    <img src="./imagens/pessoa3.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="12">
+                    <img src="./imagens/pessoa3.jpg" alt="Foto 2">
+                </div>
+                <div class="photo" photo_id="13">
+                    <img src="./imagens/pessoa1.jpg" alt="Foto 2">
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+    <script src="scripts/importar.js" defer></script>
+</html>

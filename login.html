@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Memento Gallery</title>
+    <link rel="stylesheet" href="./styles/login.css">
+    <script src="scripts/login.js"></script>
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Memento Gallery</h1>
+        <form action="/login" id="loginForm" method="POST">
+            <input type="email" id="loginEmail" name="email" placeholder="Email" required>
+            <input type="password" id="loginPassword" name="password" placeholder="Senha" required>
+            <button type="submit">Login</button>
+            <a href="forgetPassword.html">Esqueceu a senha?</a>
+            <p>Ainda não tens uma conta?
+                <a href="./Register.html">Registar</a>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

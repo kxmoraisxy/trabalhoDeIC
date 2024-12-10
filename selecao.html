@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção Inteligente</title>
+    <link rel="stylesheet" href="./styles/selecao.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="importar.html" class="sidebar-title">
+            <i class="fas fa-arrow-left"></i> Memento Gallery
+        </a>
+        <ul>
+        </ul>
+    </div>
+
+    <div class="gallery-container">
+        <h1>Seleção Inteligente</h1>
+        <p class="question">Deseja importar apenas as fotos não repetidas?</p>
+        <button class="toggle-button" data-active="false">Desligado</button>
+
+        <p class="question">Deseja importar apenas as fotos com boa qualidade?</p>
+        <button class="toggle-button" data-active="false">Desligado</button>
+
+        <p class="question">Deseja importar apenas as fotos que estejam focadas?</p>
+        <button class="toggle-button" data-active="false">Desligado</button>
+
+        <h2><button class="submit-button" id="confirmar">Confirmar Seleção</button></h2>
+    </div>
+    <script src="scripts/selecao.js"></script>
+</body>
+</html>

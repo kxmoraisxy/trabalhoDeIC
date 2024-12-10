@@ -1,0 +1,148 @@
+/* Reset de estilos bÃ¡sicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo da pÃ¡gina */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+}
+
+/* Container principal */
+.gallery-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* TÃ­tulo */
+.gallery-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* DescriÃ§Ã£o */
+.gallery-container p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Estilo para exibir o QRCode */
+.qrcode-image img {
+    width: 200px; /* Ajuste o tamanho conforme necessÃ¡rio */
+    height: 200px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* BotÃ£o de partilhar QRCode */
+.share-button {
+    padding: 12px 20px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.share-button:hover {
+    background: #45a049;
+}
+
+
+/* Estilos para a barra lateral */
+.sidebar {
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    width: 200px;
+    height: 96vh;
+    background-color: #33333366;
+    color: #fff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    margin: 2vh;
+    border-radius: 25px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilos para o conteÃºdo principal */
+.main-content {
+    margin-left: 220px;
+    /* Para ajustar o espaÃ§o da barra lateral */
+    padding: 20px;
+}
+
+
+/* Estilo para o tÃ­tulo "Momento Gallery" como um botÃ£o */
+.sidebar-title {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;  /* Tamanho um pouco maior para o tÃ­tulo */
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.sidebar-title i {
+    margin-right: 10px;  /* EspaÃ§amento entre o Ã­cone e o texto */
+    font-size: 20px;  /* Tamanho do Ã­cone */
+}
+
+.sidebar-title:hover {
+    background-color: #555;
+}

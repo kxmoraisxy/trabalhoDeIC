@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Memento Gallery</title>
+    <link rel="stylesheet" href="./styles/home.css">
+    <script src="./scripts/home.js" defer></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Memento Gallery</h2>
+        <ul>
+            <li><a href="importar.html">📤 Importar</a></li>
+            <li><a href="filtrar.html">🔍 Filtrar</a></li>
+            <li><a href="albuns.html"> 📁 Álbuns</a></li>
+        </ul>
+        <button id="partilharBtn" class="sidebar-btn">🔗 Partilhar</button>
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+    </div>
+
+    <div class="gallery-container">
+        <h1>Bem-vindo à Memento Gallery!</h1>
+        <p>Explore as fotos incríveis que temos aqui!</p>
+
+        <!-- Aviso do modo de seleção -->
+        <div id="selectionModeAlert" class="alert hidden">
+            Modo de seleção ativado. Clique em uma foto para partilhar.
+            <button class="close-btn" onclick="hideAlert()">×</button>
+        </div>
+
+        <!-- Seção de fotos -->
+        <div class="photo-gallery"></div>
+    </div>
+</body>
+</html>

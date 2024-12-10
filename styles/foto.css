@@ -1,0 +1,220 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+}
+
+/* Container principal */
+.photo-details-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Título */
+.photo-details-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Container da foto */
+.photo-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Informações exibidas no hover */
+.photo-hover-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+}
+
+.photo-container:hover .photo-hover-info {
+    opacity: 1;
+}
+
+/* Tabela de detalhes */
+.photo-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.photo-details th,
+.photo-details td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.photo-details th {
+    background: #f4f4f4;
+    font-weight: bold;
+}
+
+.photo-details td {
+    color: #555;
+}
+
+/* Estilo para o mapa */
+.location-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.location-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de voltar */
+.back-button {
+    margin-top: 20px;
+    padding: 10px 16px;
+    background: #ff4c4c;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #ff2b2b;
+}
+
+/* Estilos para a barra lateral */
+.sidebar {
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    width: 200px;
+    height: 96vh;
+    background-color: #33333366;
+    color: #fff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    margin: 2vh;
+    border-radius: 25px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilos para o conteúdo principal */
+.main-content {
+    margin-left: 220px;
+    /* Para ajustar o espaço da barra lateral */
+    padding: 20px;
+}
+
+
+/* Estilo para o título "Momento Gallery" como um botão */
+.sidebar-title {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;  /* Tamanho um pouco maior para o título */
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.sidebar-title i {
+    margin-right: 10px;  /* Espaçamento entre o ícone e o texto */
+    font-size: 20px;  /* Tamanho do ícone */
+}
+
+.sidebar-title:hover {
+    background-color: #555;
+}
+
+/* Estilos para o conteúdo principal */
+.main-content {
+    margin-left: 220px;
+    /* Para ajustar o espaço da barra lateral */
+    padding: 20px;
+}
+
+.location-container {
+    width: 300px; /* Defina a largura desejada para o contêiner */
+    height: auto; /* Altura pode ser automática ou definida */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse o contêiner */
+}
